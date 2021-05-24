@@ -53,7 +53,7 @@ def configure() {
 	def switchType = settings.switchType ?: "0"
 	def powerFailState = settings.powerFailState ?: "2"
 	def cmds = delayBetween(
-		[zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 2)), zwaveSecureEncap(zwave.configurationV1.configurationSet(parameterNumber: 2, size: 1, scaledConfigurationValue: powerFailState.toInteger())), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 2)), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 5)), zwaveSecureEncap(zwave.configurationV1.configurationSet(parameterNumber: 5, size: 1, scaledConfigurationValue: switchType.toInteger())), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 5))], 1000)
+		[zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 2)), zwaveSecureEncap(zwave.configurationV1.configurationSet(parameterNumber: 2, size: 1, scaledConfigurationValue: powerFailState.toInteger())), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 2)), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 8)), zwaveSecureEncap(zwave.configurationV1.configurationSet(parameterNumber: 8, size: 1, scaledConfigurationValue: switchType.toInteger())), zwaveSecureEncap(zwave.configurationV1.configurationGet(parameterNumber: 8))], 1000)
 	logDebug("sending ${cmds}")
 	return cmds            
 }
