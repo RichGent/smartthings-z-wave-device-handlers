@@ -4,7 +4,7 @@
  */
 import groovy.json.JsonOutput
 metadata {	
-	definition (name: "Vesternet VES-ZW-SWI-002 2-Wire Capable Switch", namespace: "Vesternet", Vesternet: "Sunricher", mcdSync: true, ocfDeviceType: "oic.d.switch", mnmn: "SmartThings", vid: "generic-switch") {
+	definition (name: "Vesternet VES-ZW-SWI-002 2-Wire Capable Switch", namespace: "Vesternet", author: "Sunricher", mcdSync: true, ocfDeviceType: "oic.d.switch", mnmn: "SmartThings", vid: "generic-switch") {
 		capability "Switch"
 		capability "Actuator"
 		capability "Sensor"
