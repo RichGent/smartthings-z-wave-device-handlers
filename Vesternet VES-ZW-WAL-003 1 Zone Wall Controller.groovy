@@ -4,7 +4,7 @@
  */
 import groovy.json.JsonOutput
 metadata {
-	definition (name: "Vesternet VES-ZW-WAL-003 1 Zone Wall Controller", namespace: "Vesternet", author: "Vesternet", mcdSync: true, ocfDeviceType: "x.com.st.d.remotecontroller", mnmn: "Sunricher", vid: "25df41cd-2547-3604-ab0c-cab8b5f7b9ca") {
+	definition (name: "Vesternet VES-ZW-WAL-003 1 Zone Wall Controller", namespace: "Vesternet", author: "Vesternet", mcdSync: true, ocfDeviceType: "x.com.st.d.remotecontroller", mnmn: "Sunricher", vid: "generic-2-button") {
 		capability "Button"
 		capability "Sensor"
 		capability "Battery"
