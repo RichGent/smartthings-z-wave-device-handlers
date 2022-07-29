@@ -141,6 +141,25 @@ def zwaveEvent(physicalgraph.zwave.commands.notificationv3.NotificationReport cm
 				log.warn("skipped cmd: ${cmd}")
         }
 	}
+	else if (cmd.notificationType == 8) {
+        logDebug("got power management notification event: ${cmd.event}")
+        switch (cmd.event) {
+            case 5:
+				//voltage drop / drift
+                log.warn("voltage drop / drift detected!")
+                break
+			case 6:
+				//over-current
+                log.warn("over-current detected!")
+                break
+			case 8:
+                // overload detected
+                log.warn("load exceeds device limit")
+                break
+            default:
+				log.warn("skipped cmd: ${cmd}")
+        }
+	}
     else {
         log.warn("skipped cmd: ${cmd}")
     }
